@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones | Flonarys</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="inicio.html" class="logo">
+
+                <img src="img/logo.png" alt="Logo Flonarys">
+
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="inicio.html">INICIO</a></li>
+
+                <li><a href="inicio.html#sobre">SOBRE NOSOTROS</a></li>
+
+                <li><a href="inicio.html#proyectos">PROYECTOS</a></li>
+
+                <li>
+                    <a href="donaciones.html" class="btn-nav">
+                        DONÁ AHORA
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="pagina-donaciones">
+
+        <section class="donaciones-contenedor">
+
+            <h1>Ayudá a plantar futuro</h1>
+
+            <p>
+                Cada $10.000 donados permiten plantar un árbol a tu nombre.
+            </p>
+
+            <button id="abrirCalculadora" class="btn-donar">
+                DONAR
+            </button>
+
+        </section>
+
+        <section id="calculadoraImpacto" class="calculadora-impacto oculto">
+
+            <div class="calculadora-card">
+
+                <h2>Calculadora de Impacto</h2>
+
+                <p>Calculá cuántos árboles podés ayudar a plantar.</p>
+
+                <div class="montos">
+
+                    <button class="montoFijo" value="10000">$10.000</button>
+                    <button class="montoFijo" value="20000">$20.000</button>
+                    <button class="montoFijo" value="50000">$50.000</button>
+
+                </div>
+
+                <input type="number" id="montoDonacion" placeholder="Ingresá otro monto">
+
+                <button id="calcularImpacto" class="btn-principal">
+                    Calcular
+                </button>
+
+                <p id="resultadoImpacto"></p>
+
+                <div class="acciones-donacion">
+
+                    <button id="hacerDonacion" class="btn-donar">
+                        Hacer donación
+                    </button>
+
+                    <button id="cerrarCalculadora" class="btn-secundario">
+                        Cerrar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="graciasDonacion" class="gracias-donacion oculto">
+
+            <div class="gracias-card">
+
+                <h2>Gracias por tu donación</h2>
+
+                <p>
+                    Tu ayuda permite que Flonarys siga protegiendo el ambiente.
+                </p>
+
+                <a href="inicio.html" class="btn-principal">
+                    Volver al inicio
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <p>
+
+                Hecho por <strong>Lucas Coceres</strong>
+
+            </p>
+
+            <p>
+
+                Copyright © 2026 Flonarys.
+                Todos los derechos reservados.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

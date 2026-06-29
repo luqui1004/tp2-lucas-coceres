@@ -1,0 +1,1201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/*----------------Variables globales----------------*/
+
+:root{
+
+    --verde:#2E7D32;
+    --verdeOscuro:#1B5E20;
+
+    --grisClaro:#F5F5F5;
+    --gris:#D9D9D9;
+    --grisTexto:#6C6C6C;
+
+    --negro:#1E1E1E;
+    --blanco:#FFFFFF;
+
+    --sombra:0px 10px 30px rgba(0,0,0,.12);
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/*----------------Body----------------*/
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--blanco);
+
+    color:var(--negro);
+
+    overflow-x:hidden;
+
+}
+
+/*----------------Imagenes----------------*/
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+/*----------------Links----------------*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/*----------------Listas----------------*/
+
+ul{
+
+    list-style:none;
+
+}
+
+/*----------------Contenedores----------------*/
+
+.container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/*----------------Header----------------*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
+}
+
+/*----------------Navbar----------------*/
+
+.navbar{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:90px;
+
+}
+
+/*----------------Logo----------------*/
+
+.logo img{
+
+    width:200px;
+    height:auto;
+
+    transition:.35s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/*----------------Botones navegación superior----------------*/
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.nav-links a{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--verde);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--verde);
+
+}
+
+.btn-nav{
+
+    background:var(--verde);
+
+    color:white !important;
+
+    padding:13px 26px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+    box-shadow:var(--sombra);
+
+}
+
+.btn-nav:hover{
+
+    background:var(--verdeOscuro);
+
+    transform:translateY(-4px);
+
+}
+
+.btn-nav::after{
+
+    display:none;
+
+}
+
+/*----------------Hero----------------*/
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45));
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    color:white;
+
+}
+
+.hero-content h1{
+
+    font-size:78px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+.hero-content p{
+
+    width:650px;
+
+    max-width:100%;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.btn-principal{
+
+    display:inline-block;
+
+    padding:18px 38px;
+
+    background:var(--verde);
+
+    color:white;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:var(--sombra);
+
+}
+
+.btn-principal:hover{
+
+    background:var(--verdeOscuro);
+
+    transform:translateY(-5px);
+
+}
+
+.hero-content{
+
+    animation:aparecer 1.2s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*----------------Sobre nosotros----------------*/
+
+.sobre-nosotros{
+
+    padding:140px 0;
+
+    background:var(--blanco);
+
+}
+
+.sobre-nosotros .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+}
+
+.sobre-texto{
+
+    flex:1;
+
+}
+
+.sobre-texto h2{
+
+    font-size:48px;
+
+    margin-bottom:30px;
+
+    color:var(--negro);
+
+    position:relative;
+
+}
+
+.sobre-texto h2::after{
+
+    content:"";
+
+    width:90px;
+
+    height:5px;
+
+    background:var(--verde);
+
+    display:block;
+
+    margin-top:15px;
+
+    border-radius:20px;
+
+}
+
+.sobre-texto p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:var(--grisTexto);
+
+    margin-bottom:25px;
+
+}
+
+.sobre-imagen{
+
+    flex:1;
+
+}
+
+.sobre-imagen img{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:var(--sombra);
+
+    transition:.45s;
+
+}
+
+.sobre-imagen img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/*----------------Proyectos----------------*/
+
+.proyectos{
+
+    padding:140px 0;
+
+    background:var(--grisClaro);
+
+}
+
+.proyectos h2{
+
+    text-align:center;
+
+    font-size:48px;
+
+    margin-bottom:80px;
+
+    position:relative;
+
+}
+
+.proyectos h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:110px;
+
+    height:5px;
+
+    background:var(--verde);
+
+    margin:20px auto;
+
+    border-radius:50px;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    align-items:start;
+
+}
+
+.card{
+
+    background:var(--blanco);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.card h3{
+
+    font-size:26px;
+
+    margin:30px 30px 15px;
+
+    color:var(--negro);
+
+    text-align:center;
+
+}
+
+.card{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card.mostrar{
+    opacity:1;
+    transform:translateY(0);
+    transition:.8s;
+}
+
+.card p{
+    max-height:0;
+    opacity:0;
+    overflow:hidden;
+    margin:0 30px;
+    text-align:center;
+    transition:max-height .45s ease, opacity .35s ease, margin .35s ease;
+}
+
+.card.abierta p{
+    max-height:200px;
+    opacity:1;
+    margin:0 30px 35px;
+}
+
+.card h3,
+.card img{
+    cursor:pointer;
+}
+
+/*----------------Donaciones Footer----------------*/
+
+.donacion{
+
+    position:relative;
+
+    width:100%;
+
+    height:500px;
+
+    overflow:hidden;
+
+}
+
+.donacion-imagen{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.donacion-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+.donacion-overlay h2{
+
+    font-size:54px;
+
+    margin-bottom:20px;
+
+}
+
+.donacion-overlay p{
+
+    font-size:20px;
+
+    max-width:750px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.btn-donar{
+
+    display:inline-block;
+
+    background:var(--verde);
+
+    color:white;
+
+    padding:22px 55px;
+
+    border-radius:60px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:var(--sombra);
+
+}
+
+.btn-donar:hover{
+
+    background:var(--verdeOscuro);
+
+    transform:translateY(-6px) scale(1.03);
+
+}
+
+/*----------------Footer----------------*/
+
+footer{
+
+    background:var(--negro);
+
+    color:white;
+
+    padding:40px 20px;
+
+}
+
+.footer-container{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-container p{
+
+    color:#D5D5D5;
+
+    font-size:15px;
+
+}
+
+/*----------------Seccion donaciones----------------*/
+
+.pagina-donaciones{
+    min-height:100vh;
+    background:linear-gradient(135deg, #F5F5F5, #E8F5E9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.donaciones-contenedor{
+    text-align:center;
+    max-width:800px;
+}
+
+.donaciones-contenedor h1{
+    font-size:56px;
+    margin-bottom:20px;
+    color:var(--negro);
+}
+
+.donaciones-contenedor p{
+    font-size:22px;
+    color:var(--grisTexto);
+    margin-bottom:40px;
+}
+
+.calculadora-impacto,
+.gracias-donacion{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:9999;
+}
+
+.calculadora-card,
+.gracias-card{
+    background:white;
+    width:100%;
+    max-width:650px;
+    border-radius:30px;
+    padding:45px;
+    text-align:center;
+    box-shadow:var(--sombra);
+    animation:aparecer .4s ease;
+}
+
+.calculadora-card h2,
+.gracias-card h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.calculadora-card p,
+.gracias-card p{
+    color:var(--grisTexto);
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.montos{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.montoFijo{
+    padding:14px 24px;
+    border:none;
+    outline:none;
+    border-radius:50px;
+    background:var(--grisClaro);
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.montoFijo:hover{
+    background:var(--verde);
+    color:white;
+    transform:translateY(-3px);
+}
+
+#montoDonacion{
+    width:100%;
+    padding:18px 22px;
+    border:2px solid var(--gris);
+    border-radius:50px;
+    font-size:18px;
+    margin-bottom:20px;
+    outline:none;
+}
+
+#montoDonacion:focus{
+    border-color:var(--verde);
+}
+
+#resultadoImpacto{
+    font-size:22px;
+    font-weight:700;
+    color:var(--verdeOscuro);
+    margin-top:25px;
+}
+
+.acciones-donacion{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn-secundario{
+    padding:18px 38px;
+    border-radius:50px;
+    border:none;
+    outline:none;
+    background:var(--negro);
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-secundario:hover{
+    transform:translateY(-4px);
+    background:#000;
+}
+
+.oculto{
+    display:none;
+}
+
+.pagina-donaciones button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    
+
+}
+
+/*----------------Carrusel----------------*/
+
+.hero-flecha{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:70px;
+    height:70px;
+    border:none;
+    outline:none;
+    background:transparent;
+    cursor:pointer;
+    z-index:20;
+    transition:.3s;
+}
+
+/* Imagen PNG dentro del botón */
+.hero-flecha img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/* Flecha izquierda */
+.hero-flecha-izquierda{
+    left:45px;
+}
+
+/* Flecha derecha */
+.hero-flecha-derecha{
+    right:45px;
+}
+
+/* Hover simple */
+.hero-flecha:hover{
+    transform:translateY(-50%) scale(1.12);
+    opacity:.8;
+}
+
+/* Suaviza el cambio de imagen, título y texto */
+#heroImagen,
+#heroTitulo,
+#heroDescripcion{
+    transition:transform .55s ease, opacity .55s ease;
+}
+
+/*----------------Diseño responsive----------------*/
+
+/*----------------PC----------------*/
+
+@media(max-width:992px){
+
+    .navbar{
+
+        height:80px;
+
+    }
+
+    .logo img{
+
+        width:150px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:58px;
+
+    }
+
+    .hero-content p{
+
+        font-size:19px;
+
+    }
+
+    .sobre-nosotros .container{
+
+        flex-direction:column;
+
+    }
+
+    .cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .donacion-overlay h2{
+
+        font-size:42px;
+
+    }
+
+}
+
+/*----------------Celular1----------------*/
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:15px;
+
+        height:auto;
+
+        padding:20px 0;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+    .hero{
+
+        height:90vh;
+
+    }
+
+    .hero-content{
+
+        text-align:center;
+
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-content p{
+
+        font-size:17px;
+
+    }
+
+    .btn-principal{
+
+        padding:16px 30px;
+
+    }
+
+    .sobre-nosotros{
+
+        padding:90px 0;
+
+    }
+
+    .sobre-texto h2{
+
+        font-size:34px;
+
+    }
+
+    .sobre-texto{
+
+        text-align:center;
+
+    }
+
+    .sobre-texto h2::after{
+
+        margin:15px auto;
+
+    }
+
+    .proyectos{
+
+        padding:90px 0;
+
+    }
+
+    .proyectos h2{
+
+        font-size:34px;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card img{
+
+        height:220px;
+
+    }
+
+    .donacion{
+
+        height:420px;
+
+    }
+
+    .donacion-overlay h2{
+
+        font-size:34px;
+
+    }
+
+    .donacion-overlay p{
+
+        font-size:17px;
+
+    }
+
+    .btn-donar{
+
+        padding:18px 35px;
+
+        font-size:18px;
+
+    }
+
+    .footer-container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .donaciones-contenedor h1{
+        font-size:38px;
+    }
+
+    .donaciones-contenedor p{
+        font-size:18px;
+    }
+
+    .calculadora-card,
+    .gracias-card{
+        padding:30px 20px;
+    }
+
+    .calculadora-card h2,
+    .gracias-card h2{
+        font-size:32px;
+    }
+
+    .hero-flecha{
+        width:45px;
+        height:45px;
+    }
+
+    .hero-flecha-izquierda{
+        left:15px;
+    }
+
+    .hero-flecha-derecha{
+        right:15px;
+    }
+
+}
+
+/*----------------Celular2----------------*/
+
+@media(max-width:480px){
+
+    .hero-content h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .sobre-texto h2{
+
+        font-size:30px;
+
+    }
+
+    .proyectos h2{
+
+        font-size:30px;
+
+    }
+
+    .donacion-overlay h2{
+
+        font-size:30px;
+
+    }
+
+    .btn-nav{
+
+        padding:12px 20px;
+
+    }
+
+}
